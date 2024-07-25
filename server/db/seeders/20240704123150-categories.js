@@ -7,8 +7,8 @@ module.exports = {
       "Categories",
       [
         {
-          title: "Фильмы",
-          img: 'https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg',
+          title: "Угадай персонажей по картинкам",
+          img: 'client/public/Снимок экрана 2024-07-25 175236.png',
         },
         {
           title: "Сериалы",
