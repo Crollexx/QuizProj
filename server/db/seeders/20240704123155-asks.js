@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      "Questions",
+      "Asks",
       [
         {
           question: 'Кто это ???😱😱😱',
@@ -60,22 +60,15 @@ module.exports = {
           img: 'client/public/Снимок экрана 2024-07-25 182043.png',
           categoryId: 1
         },
-    
-        {
-          question: '🗡️🪑🛡️',
-          answer: 'Игра престолов',
-          img: 'https://img.freepik.com/free-vector/question-mark-in-cartoon-style-circle_78370-1434.jpg',
-          categoryId: 2
-        },
-        
 
+       
       ],
       {}
     );
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("Question", null, {});
+    await queryInterface.bulkDelete("Asks", null, {});
   },
 };
 
