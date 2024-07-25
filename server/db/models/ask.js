@@ -3,13 +3,13 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Question extends Model {
+  class Ask extends Model {
    
-    static associate({ Category }) {
-      this.belongsTo(Category, { foreignKey: 'categoryId' })
+    static associate({ Topic }) {
+      this.belongsTo(Topic, { foreignKey: 'topicId' })
     }
   }
-  Question.init({
+  Ask.init({
     question: {
       allowNull: false,
       type: DataTypes.STRING
@@ -21,17 +21,17 @@ module.exports = (sequelize, DataTypes) => {
     img: {
       type: DataTypes.STRING
     },
-    categoryId: {
+    topicId: {
       allowNull: false,
       type: DataTypes.INTEGER,
       references: {
-        model: 'Category',
+        model: 'topic',
         key: 'id'
       }
     }
   }, {
     sequelize,
-    modelName: 'Category',
+    modelName: 'Ask',
   });
-  return Question;
+  return Ask;
 };
