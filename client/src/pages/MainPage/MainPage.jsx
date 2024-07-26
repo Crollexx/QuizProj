@@ -5,7 +5,7 @@ function MainPage() {
   return (
     <div>
     <h1>Приветствую тебя, дорогой друг!</h1>
-    {/* <Link to="/topics">Вход в игру</Link> */}
+    <Link to="/topics">Вход в игру</Link>
     </div>
   )
 }
