@@ -26,53 +26,51 @@ export default function AskList() {
 
   function checkAnswer() {
     if (answer.toLowerCase().trim() === (question.answer || "").toLowerCase()) {
-      setRightAnswer("Красава!!!");
+      setRightAnswer("ДААААААА!!!!");
       setTimeout(() => {
         setAnswer("");
       }, 1000);
     } else {
-      setRightAnswer(`No!! Правильный ответ: ${question.answer}`);
+      setRightAnswer(`НЕЕЕЕ!! Правильный ответ: ${question.answer}`);
       setAnswer("");
     }
   }
 
   return (
-    <div>
+    <div className="glavDiv container-fluid d-flex justify-content-center align-items-center full-height flex-column mx-auto'">
       <div>
-        {question.img && <img src={question.img} alt="Question" />}
-        <p>{question.question || "Loading..."}</p>
+        {question.img && <img className="img" src={question.img} alt="Question"  />}
+        <p className="glow text-center mt-3">{question.question || "Loading..."}</p>
         <div>
-          <input
+        {id == 19 || id == 28 ? (
+              <Link className="size mt-5 button glow-button mx-5" to="/topics" >
+                Категории
+              </Link>
+
+          ) : (
+
+              <Link className="size mt-5 button glow-button mx-5" to={`/asks/${+id + 1}`} >
+                Далее
+              </Link>
+          )}
+
+          <input  className='input rounded-start mt-5'
             placeholder="Введите Ваш ответ"
             type="text"
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
           />
-          <button type="button" onClick={checkAnswer} >
+          <a className="size mt-5 button glow-button me-5 " type="button" onClick={checkAnswer} >
             OK
-          </button>
-          {id == 8 || id == 16 ? (
-            <button >
-              <Link to="/topics" >
-                Категории
-              </Link>
-            </button>
-          ) : (
-            <button >
-              <Link to={`/asks/${+id + 1}`} >
-                Далее
-              </Link>
-            </button>
-          )}
+          </a>
 
-          <button >
-            <Link to="/" >
+            <Link className="size mt-5 button glow-button mx-5" to="/" >
               На Главную
             </Link>
-          </button>
         </div>
-        <div >{rightAnswer}</div>
+        
       </div>
+      <div className="glow answer">{rightAnswer}</div>
     </div>
   );
 }

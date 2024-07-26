@@ -8,11 +8,11 @@ module.exports = {
       [
         {
           title: "Угадай Эльбрусовца",
-          img: 'client/public/Снимок экрана 2024-07-25 175236.png',
+          img: "",
         },
         {
           title: "Угадай персонажа",
-          img: "https://cs6.pikabu.ru/post_img/big/2015/04/04/5/1428133715_1088484325.jpg",
+          img: "",
         }
       ],
       {}

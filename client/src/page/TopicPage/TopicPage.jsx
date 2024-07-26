@@ -18,38 +18,23 @@ function TopicPage({ title }) {
   }, []); 
  
   return ( 
-    <div className="topicpage-container"> 
-      <h1 style={{
-        fontSize: '100px',
-        color: 'white',
-        padding: '15px 30px',
-      //   backgroundColor: '#4caf50',
-        borderRadius: '5px',
-        textAlign: 'center',
-        animation: 'color-change 5s infinite alternate',
-      }}>Категория</h1> 
-      <div className="topics-container"> 
+    <div className='glavDiv container-fluid d-flex justify-content-center align-items-center full-height flex-column mx-auto'> 
+      <h1 className='glow text-center'>Категория</h1> 
+      <div className="topics-container d-flex"> 
         {topics.length > 1 && ( 
           <> 
-            <div className="topic-item"> 
-              <img src={topics[0].img} alt={topics[0].title} className="topic-image" /> 
-              <button className="topic-button"> 
-                <Link to={`/asks/1`} className="topic-link"> 
+                <Link to={`/asks/1`} className="topic-link className='glow me-5 mt-5 button glow-button'"> 
                   <h1>{topics[0].title}</h1> 
                 </Link> 
-              </button> 
-            </div> 
-            <div className="topic-item"> 
-              <img src={topics[1].img} alt={topics[1].title} className="topic-image" /> 
-              <button className="topic-button"> 
-                <Link to={`/asks/9`} className="topic-link"> 
+                
+                <Link to={`/asks/20`} className="topic-link className='glow me-5 mt-5 button glow-button'"> 
                   <h1>{topics[1].title}</h1> 
                 </Link> 
-              </button> 
-            </div> 
+           
           </> 
         )} 
       </div> 
+      <img src="Hello Kitty Hello Kitty Dancing GIF - Hello Kitty Hello Kitty Dancing Hello Kitty Meme - Discover & Share GIFs.gif" className='mt-5 rounded-5' alt="" />
     </div> 
   ); 
 } 
