@@ -60,6 +60,14 @@ module.exports = {
           img: 'client/public/Снимок экрана 2024-07-25 182043.png',
           categoryId: 1
         },
+        
+        
+        {
+          question: 'Кто это ???😱😱😱',
+          answer: 'Крош',
+          img: 'client/public/Снимок экрана 2024-07-25 182043.png',
+          categoryId: 2
+        },
 
 
        
