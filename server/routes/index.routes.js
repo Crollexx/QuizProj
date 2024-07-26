@@ -3,7 +3,7 @@ const router = require("express").Router();
 const topicRoutes = require("./api/topic.routes");
 const askRoutes = require("./api/ask.routes");
 
-router.use("/topics", topicRoutes);
-router.use("/asks", askRoutes);
+router.use("/api/topics", topicRoutes);
+router.use("/api/asks", askRoutes);
 
 module.exports = router;

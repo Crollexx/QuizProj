@@ -6,7 +6,7 @@ module.exports = {
     await queryInterface.bulkInsert(
       "Topics",
       [
-        { NewRelise
+        {
           title: "Угадай персонажей по картинкам",
           img: 'client/public/Снимок экрана 2024-07-25 175236.png',
         },
