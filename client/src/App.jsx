@@ -8,6 +8,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/topics" element={<Topics />} />
+        {/* <Route path="/elbrus" element={<Elbrus />} /> */}
+        
       </Routes>
       <div><Outlet /></div>
     </div>
